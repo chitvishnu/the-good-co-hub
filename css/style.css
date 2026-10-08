@@ -1,0 +1,2863 @@
+/* =========================================================
+   THE GOOD CO HUB
+   STEP 1 — FOUNDATION + HERO
+========================================================= */
+
+
+/* =========================================================
+   1. DESIGN VARIABLES
+========================================================= */
+
+:root {
+
+    --cream: #F6F0E6;
+
+    --forest: #355C4A;
+
+    --terracotta: #B9654A;
+
+    --brown: #5B4638;
+
+    --white: #FFFFFF;
+
+    --black: #1E1E1E;
+
+    --light-cream: #FBF8F2;
+
+    --border: rgba(91, 70, 56, 0.15);
+
+    --serif: "Playfair Display", Georgia, serif;
+
+    --sans: "DM Sans", Arial, sans-serif;
+
+    --container: 1180px;
+
+    --radius-sm: 8px;
+
+    --radius-md: 16px;
+
+    --radius-lg: 24px;
+
+    --transition: 0.3s ease;
+}
+
+
+/* =========================================================
+   2. RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--sans);
+    background: var(--cream);
+    color: var(--brown);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* =========================================================
+   3. CONTAINER
+========================================================= */
+
+.container {
+    width: min(100% - 40px, var(--container));
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   4. NAVBAR
+========================================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    background: rgba(246, 240, 230, 0.97);
+
+    border-bottom: 1px solid rgba(91, 70, 56, 0.10);
+
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(246, 240, 230, 0.92);
+
+    box-shadow:
+        0 8px 30px rgba(91, 70, 56, 0.10);
+
+    backdrop-filter: blur(12px);
+}
+
+
+/* =========================================================
+   NAV CONTAINER
+========================================================= */
+
+.nav-container {
+    min-height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.brand {
+    display: flex;
+    align-items: baseline;
+
+    gap: 7px;
+
+    white-space: nowrap;
+}
+
+.brand span {
+    font-family: var(--serif);
+
+    font-size: 1.5rem;
+
+    font-weight: 600;
+
+    letter-spacing: -0.02em;
+
+    color: var(--brown);
+}
+
+.brand strong {
+    font-size: 0.68rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    color: var(--terracotta);
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav-menu {
+    display: flex;
+
+    align-items: center;
+
+    gap: 27px;
+}
+
+.nav-menu a {
+    position: relative;
+
+    padding: 8px 0;
+
+    font-size: 0.88rem;
+
+    font-weight: 500;
+
+    color: var(--brown);
+
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--terracotta);
+}
+
+
+/* =========================================================
+   ACTIVE LINK
+========================================================= */
+
+.nav-menu a.active {
+    color: var(--forest);
+}
+
+.nav-menu a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 2px;
+
+    border-radius: 10px;
+
+    background: var(--terracotta);
+}
+
+
+/* =========================================================
+   JOIN BUTTON
+========================================================= */
+
+.nav-menu .nav-cta {
+    padding: 11px 20px;
+
+    border-radius: 999px;
+
+    background: var(--forest);
+
+    color: var(--white) !important;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.nav-menu .nav-cta::after {
+    display: none;
+}
+
+.nav-menu .nav-cta:hover {
+    background: var(--terracotta);
+
+    color: var(--white) !important;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: var(--brown);
+
+    font-size: 1.25rem;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+.menu-toggle:hover {
+    background: var(--forest);
+
+    border-color: var(--forest);
+
+    color: var(--white);
+}
+
+/* =========================================================
+   4. NAVBAR
+========================================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    background: rgba(246, 240, 230, 0.97);
+
+    border-bottom: 1px solid rgba(91, 70, 56, 0.10);
+
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(246, 240, 230, 0.92);
+
+    box-shadow:
+        0 8px 30px rgba(91, 70, 56, 0.10);
+
+    backdrop-filter: blur(12px);
+}
+
+
+/* =========================================================
+   NAV CONTAINER
+========================================================= */
+
+.nav-container {
+    min-height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.brand {
+    display: flex;
+    align-items: baseline;
+
+    gap: 7px;
+
+    white-space: nowrap;
+}
+
+.brand span {
+    font-family: var(--serif);
+
+    font-size: 1.5rem;
+
+    font-weight: 600;
+
+    letter-spacing: -0.02em;
+
+    color: var(--brown);
+}
+
+.brand strong {
+    font-size: 0.68rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    color: var(--terracotta);
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav-menu {
+    display: flex;
+
+    align-items: center;
+
+    gap: 27px;
+}
+
+.nav-menu a {
+    position: relative;
+
+    padding: 8px 0;
+
+    font-size: 0.88rem;
+
+    font-weight: 500;
+
+    color: var(--brown);
+
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--terracotta);
+}
+
+
+/* =========================================================
+   ACTIVE LINK
+========================================================= */
+
+.nav-menu a.active {
+    color: var(--forest);
+}
+
+.nav-menu a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 2px;
+
+    border-radius: 10px;
+
+    background: var(--terracotta);
+}
+
+
+/* =========================================================
+   JOIN BUTTON
+========================================================= */
+
+.nav-menu .nav-cta {
+    padding: 11px 20px;
+
+    border-radius: 999px;
+
+    background: var(--forest);
+
+    color: var(--white) !important;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.nav-menu .nav-cta::after {
+    display: none;
+}
+
+.nav-menu .nav-cta:hover {
+    background: var(--terracotta);
+
+    color: var(--white) !important;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: var(--brown);
+
+    font-size: 1.25rem;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+.menu-toggle:hover {
+    background: var(--forest);
+
+    border-color: var(--forest);
+
+    color: var(--white);
+}
+/* =========================================================
+   4. NAVBAR
+========================================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    background: rgba(246, 240, 230, 0.97);
+
+    border-bottom: 1px solid rgba(91, 70, 56, 0.10);
+
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(246, 240, 230, 0.92);
+
+    box-shadow:
+        0 8px 30px rgba(91, 70, 56, 0.10);
+
+    backdrop-filter: blur(12px);
+}
+
+
+/* =========================================================
+   NAV CONTAINER
+========================================================= */
+
+.nav-container {
+    min-height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.brand {
+    display: flex;
+    align-items: baseline;
+
+    gap: 7px;
+
+    white-space: nowrap;
+}
+
+.brand span {
+    font-family: var(--serif);
+
+    font-size: 1.5rem;
+
+    font-weight: 600;
+
+    letter-spacing: -0.02em;
+
+    color: var(--brown);
+}
+
+.brand strong {
+    font-size: 0.68rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    color: var(--terracotta);
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav-menu {
+    display: flex;
+
+    align-items: center;
+
+    gap: 27px;
+}
+
+.nav-menu a {
+    position: relative;
+
+    padding: 8px 0;
+
+    font-size: 0.88rem;
+
+    font-weight: 500;
+
+    color: var(--brown);
+
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--terracotta);
+}
+
+
+/* =========================================================
+   ACTIVE LINK
+========================================================= */
+
+.nav-menu a.active {
+    color: var(--forest);
+}
+
+.nav-menu a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 2px;
+
+    border-radius: 10px;
+
+    background: var(--terracotta);
+}
+
+
+/* =========================================================
+   JOIN BUTTON
+========================================================= */
+
+.nav-menu .nav-cta {
+    padding: 11px 20px;
+
+    border-radius: 999px;
+
+    background: var(--forest);
+
+    color: var(--white) !important;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.nav-menu .nav-cta::after {
+    display: none;
+}
+
+.nav-menu .nav-cta:hover {
+    background: var(--terracotta);
+
+    color: var(--white) !important;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: var(--brown);
+
+    font-size: 1.25rem;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+.menu-toggle:hover {
+    background: var(--forest);
+
+    border-color: var(--forest);
+
+    color: var(--white);
+}
+
+/* =========================================================
+   5. GENERAL EYEBROW
+========================================================= */
+
+.section-eyebrow {
+    margin-bottom: 18px;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    color: var(--terracotta);
+}
+
+.section-eyebrow span {
+    margin: 0 5px;
+}
+
+
+/* =========================================================
+   6. BUTTONS
+========================================================= */
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 13px 22px;
+
+    border-radius: 999px;
+
+    font-size: 0.82rem;
+    font-weight: 700;
+
+    letter-spacing: 0.04em;
+
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background: var(--terracotta);
+    color: var(--white);
+
+    border: 1px solid var(--terracotta);
+}
+
+.btn-primary:hover {
+    background: #A9553D;
+    border-color: #A9553D;
+
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+
+    color: var(--forest);
+
+    border: 1px solid var(--forest);
+}
+
+.btn-outline:hover {
+    background: var(--forest);
+    color: var(--white);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   7. HERO
+========================================================= */
+
+.hero {
+    min-height: calc(100vh - 78px);
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 0;
+
+    background: var(--cream);
+}
+
+.hero-grid {
+    display: grid;
+
+    grid-template-columns: 1.05fr 0.95fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* Hero content */
+
+.hero-content {
+    max-width: 680px;
+}
+
+.hero h1 {
+    font-family: var(--serif);
+
+    font-size: clamp(3.2rem, 5.4vw, 5.4rem);
+
+    line-height: 1.04;
+
+    font-weight: 500;
+
+    color: var(--brown);
+
+    margin-bottom: 28px;
+}
+
+.hero-description {
+    max-width: 650px;
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+
+    color: #74665D;
+
+    margin-bottom: 22px;
+}
+
+.hero-price {
+    margin-bottom: 30px;
+
+    font-weight: 600;
+
+    color: var(--forest);
+}
+
+.hero-price span {
+    margin: 0 7px;
+
+    color: var(--terracotta);
+}
+
+.hero-buttons {
+    display: flex;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+}
+
+/* =========================================================
+   8. HERO VISUAL
+========================================================= */
+
+.hero-visual {
+    position: relative;
+}
+
+.hero-image-wrapper {
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    height: 570px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 25px 60px rgba(91, 70, 56, 0.18);
+}
+
+
+/* =========================================================
+   HERO FLOATING CARD
+========================================================= */
+
+.hero-floating-card {
+    position: absolute;
+
+    left: -35px;
+    bottom: 35px;
+
+    width: 270px;
+
+    padding: 22px 24px;
+
+    background: rgba(246, 240, 230, 0.96);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 15px 40px rgba(91, 70, 56, 0.18);
+
+    backdrop-filter: blur(10px);
+}
+
+.hero-floating-card span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 0.68rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    color: var(--terracotta);
+}
+
+.hero-floating-card strong {
+    display: block;
+
+    font-family: var(--serif);
+
+    font-size: 1.35rem;
+
+    line-height: 1.25;
+
+    font-weight: 500;
+
+    color: var(--brown);
+
+    margin-bottom: 12px;
+}
+
+.hero-floating-card small {
+    color: var(--forest);
+
+    font-size: 0.82rem;
+}
+ 
+
+
+/* =========================================================
+   9. MOBILE FOUNDATION
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .nav-menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero {
+        min-height: auto;
+
+        padding: 70px 0 80px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+
+        text-align: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-placeholder {
+        min-height: 500px;
+    }
+}
+
+
+    /* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .nav-menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 70px 0 80px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        height: 500px;
+    }
+
+    .hero-floating-card {
+        left: 20px;
+        bottom: 25px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: min(100% - 28px, var(--container));
+    }
+
+    .hero {
+        padding: 55px 0 65px;
+    }
+
+    .hero h1 {
+        font-size: 2.65rem;
+    }
+
+    .hero-image {
+        height: 420px;
+        border-radius: 20px;
+    }
+
+    .hero-floating-card {
+        left: 12px;
+        bottom: 12px;
+        width: 240px;
+        padding: 17px 18px;
+    }
+
+    .hero-floating-card strong {
+        font-size: 1.15rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+}
+/* =========================================================
+   STEP 4 — WHY GOOD CO HUB
+========================================================= */
+
+.concept {
+    padding: 120px 0;
+
+    background: var(--white);
+}
+
+
+/* =========================================================
+   MAIN CONCEPT
+========================================================= */
+
+.concept-grid {
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 90px;
+
+    align-items: start;
+}
+
+
+/* Left heading */
+
+.concept-heading h2 {
+    max-width: 500px;
+
+    font-family: var(--serif);
+
+    font-size: clamp(2.7rem, 4vw, 4.2rem);
+
+    line-height: 1.08;
+
+    font-weight: 500;
+
+    color: var(--brown);
+}
+
+
+/* Right content */
+
+.concept-copy {
+    max-width: 650px;
+}
+
+.concept-copy p {
+    margin-bottom: 24px;
+
+    color: #74665D;
+
+    font-size: 1.02rem;
+
+    line-height: 1.8;
+}
+
+.concept-copy .concept-closing {
+    margin-top: 32px;
+
+    margin-bottom: 0;
+
+    font-family: var(--serif);
+
+    font-size: 1.4rem;
+
+    line-height: 1.5;
+
+    color: var(--brown);
+}
+
+
+/* =========================================================
+   HIGHLIGHTS
+========================================================= */
+
+.concept-highlights {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-top: 90px;
+
+    padding-top: 45px;
+
+    border-top: 1px solid var(--border);
+}
+
+.concept-highlight {
+    padding: 28px;
+
+    background: var(--light-cream);
+
+    border-radius: var(--radius-md);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.concept-highlight:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(91, 70, 56, 0.08);
+}
+
+.concept-highlight > span {
+    display: block;
+
+    margin-bottom: 15px;
+
+    font-family: var(--serif);
+
+    font-size: 1.5rem;
+
+    color: var(--terracotta);
+}
+
+.concept-highlight h3 {
+    margin-bottom: 9px;
+
+    font-family: var(--serif);
+
+    font-size: 1.45rem;
+
+    font-weight: 500;
+
+    color: var(--brown);
+}
+
+.concept-highlight p {
+    color: #74665D;
+
+    font-size: 0.92rem;
+
+    line-height: 1.65;
+}
+/* =========================================================
+   CONCEPT — MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .concept {
+        padding: 90px 0;
+    }
+
+    .concept-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .concept-heading h2 {
+        max-width: 700px;
+    }
+
+    .concept-copy {
+        max-width: 700px;
+    }
+
+    .concept-highlights {
+        grid-template-columns: 1fr;
+
+        margin-top: 60px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .concept {
+        padding: 75px 0;
+    }
+
+    .concept-heading h2 {
+        font-size: 2.45rem;
+    }
+
+    .concept-copy p {
+        font-size: 0.98rem;
+    }
+
+    .concept-copy .concept-closing {
+        font-size: 1.25rem;
+    }
+
+    .concept-highlight {
+        padding: 24px;
+    }
+
+}
+/* =========================================================
+   STEP 5 — PARTY FLOW
+========================================================= */
+
+.party-flow {
+    padding: 120px 0;
+
+    background: #E8F0EA;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+    margin-bottom: 60px;
+}
+
+.section-heading.centered {
+    max-width: 750px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+.section-heading h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(2.6rem, 4vw, 4rem);
+
+    line-height: 1.1;
+
+    font-weight: 500;
+
+    color: var(--brown);
+
+    margin-bottom: 18px;
+}
+
+.section-heading > p:not(.section-eyebrow) {
+    color: #74665D;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   PARTY GRID
+========================================================= */
+
+.party-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 15px;
+}
+
+
+/* =========================================================
+   PARTY CARD
+========================================================= */
+
+.party-card {
+    min-height: 300px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 30px 24px;
+
+    background: var(--white);
+
+    border-radius: var(--radius-md);
+
+    border: 1px solid rgba(91, 70, 56, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.party-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 18px 40px rgba(91, 70, 56, 0.10);
+}
+
+
+/* Number */
+
+.party-number {
+    display: block;
+
+    margin-bottom: auto;
+
+    font-family: var(--serif);
+
+    font-size: 1.7rem;
+
+    color: var(--terracotta);
+}
+
+
+/* Heading */
+
+.party-card h3 {
+    margin-bottom: 12px;
+
+    font-family: var(--serif);
+
+    font-size: 1.5rem;
+
+    line-height: 1.2;
+
+    font-weight: 500;
+
+    color: var(--brown);
+}
+
+
+/* Description */
+
+.party-card p {
+    color: #74665D;
+
+    font-size: 0.9rem;
+
+    line-height: 1.65;
+}
+/* =========================================================
+   PARTY FLOW — MOBILE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .party-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .party-flow {
+        padding: 85px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 45px;
+    }
+
+    .section-heading h2 {
+        font-size: 2.5rem;
+    }
+
+    .party-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .party-card {
+        min-height: auto;
+
+        padding: 28px;
+    }
+
+    .party-number {
+        margin-bottom: 35px;
+    }
+
+}
+/* =========================================================
+   STEP 6 — EXPERIENCE AT A GLANCE
+========================================================= */
+
+.glance {
+    padding: 120px 0;
+
+    background: var(--cream);
+}
+
+
+/* =========================================================
+   GLANCE GRID
+========================================================= */
+
+.glance-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   GLANCE CARD
+========================================================= */
+
+.glance-card {
+    min-height: 210px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 32px;
+
+    background: var(--white);
+
+    border-radius: var(--radius-md);
+
+    border: 1px solid rgba(91, 70, 56, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.glance-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 40px rgba(91, 70, 56, 0.10);
+}
+
+
+/* Small label */
+
+.glance-card > span {
+    margin-bottom: 14px;
+
+    font-size: 0.68rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    color: var(--terracotta);
+}
+
+
+/* Main number */
+
+.glance-card h3 {
+    margin-bottom: 6px;
+
+    font-family: var(--serif);
+
+    font-size: 2.4rem;
+
+    line-height: 1.1;
+
+    font-weight: 500;
+
+    color: var(--brown);
+}
+
+
+/* Description */
+
+.glance-card p {
+    color: #74665D;
+
+    font-size: 0.9rem;
+}
+/* =========================================================
+   GLANCE — MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .glance {
+        padding: 90px 0;
+    }
+
+    .glance-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .glance {
+        padding: 75px 0;
+    }
+
+    .glance-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .glance-card {
+        min-height: 180px;
+
+        padding: 28px;
+    }
+
+    .glance-card h3 {
+        font-size: 2.1rem;
+    }
+
+}
+/* =========================================================
+   STEP 7 — WHO IS THIS FOR?
+========================================================= */
+
+.audience {
+    padding: 120px 0;
+
+    background: var(--white);
+}
+
+
+/* =========================================================
+   AUDIENCE GRID
+========================================================= */
+
+.audience-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   AUDIENCE IMAGE
+========================================================= */
+
+.audience-visual {
+    position: relative;
+}
+
+.audience-photo {
+    position: relative;
+}
+
+.audience-photo img {
+    width: 100%;
+
+    height: 560px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 26px;
+
+    box-shadow:
+        0 22px 55px rgba(91, 70, 56, 0.14);
+}
+
+
+/* =========================================================
+   IMAGE CAPTION
+========================================================= */
+
+.audience-photo-caption {
+    position: absolute;
+
+    left: 25px;
+    bottom: 25px;
+
+    padding: 18px 22px;
+
+    background: rgba(246, 240, 230, 0.96);
+
+    border-radius: 14px;
+
+    font-family: var(--serif);
+
+    font-size: 1.25rem;
+
+    line-height: 1.3;
+
+    color: var(--brown);
+
+    box-shadow:
+        0 12px 30px rgba(91, 70, 56, 0.14);
+}
+
+
+/* =========================================================
+   AUDIENCE CONTENT
+========================================================= */
+
+.audience-content {
+    max-width: 600px;
+}
+
+.audience-content h2 {
+    margin-bottom: 22px;
+
+    font-family: var(--serif);
+
+    font-size: clamp(2.7rem, 4vw, 4rem);
+
+    line-height: 1.08;
+
+    font-weight: 500;
+
+    color: var(--brown);
+}
+
+.audience-intro {
+    margin-bottom: 30px;
+
+    color: #74665D;
+
+    font-size: 1.02rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   AUDIENCE LIST
+========================================================= */
+
+.audience-list {
+    list-style: none;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 17px;
+}
+
+.audience-list li {
+    position: relative;
+
+    padding-left: 30px;
+
+    color: var(--brown);
+
+    font-size: 0.95rem;
+
+    line-height: 1.6;
+}
+
+.audience-list li::before {
+    content: "✓";
+
+    position: absolute;
+
+    left: 0;
+    top: 1px;
+
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #E8F0EA;
+
+    color: var(--forest);
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+}
+/* =========================================================
+   AUDIENCE — MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .audience {
+        padding: 90px 0;
+    }
+
+    .audience-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .audience-content {
+        max-width: 700px;
+    }
+
+    .audience-photo img {
+        height: 500px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .audience {
+        padding: 75px 0;
+    }
+
+    .audience-content h2 {
+        font-size: 2.45rem;
+    }
+
+    .audience-photo img {
+        height: 420px;
+
+        border-radius: 20px;
+    }
+
+    .audience-photo-caption {
+        left: 15px;
+        bottom: 15px;
+
+        padding: 15px 18px;
+
+        font-size: 1.1rem;
+    }
+
+}
+/* =========================================================
+   STEP 8 — WHAT ₹2,499 INCLUDES
+========================================================= */
+
+.included {
+    padding: 120px 0;
+
+    background: #F1E8DC;
+}
+
+
+/* =========================================================
+   INCLUDED GRID
+========================================================= */
+
+.included-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   INCLUDED CARD
+========================================================= */
+
+.included-card {
+    min-height: 250px;
+
+    padding: 32px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: var(--white);
+
+    border-radius: var(--radius-md);
+
+    border: 1px solid rgba(91, 70, 56, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.included-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 40px rgba(91, 70, 56, 0.10);
+}
+
+
+/* Number */
+
+.included-number {
+    display: block;
+
+    margin-bottom: auto;
+
+    font-family: var(--serif);
+
+    font-size: 1.6rem;
+
+    color: var(--terracotta);
+}
+
+
+/* Heading */
+
+.included-card h3 {
+    margin-bottom: 10px;
+
+    font-family: var(--serif);
+
+    font-size: 1.5rem;
+
+    line-height: 1.2;
+
+    font-weight: 500;
+
+    color: var(--brown);
+}
+
+
+/* Description */
+
+.included-card p {
+    color: #74665D;
+
+    font-size: 0.92rem;
+
+    line-height: 1.65;
+}
+/* =========================================================
+   INCLUDED — MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .included {
+        padding: 90px 0;
+    }
+
+    .included-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .included {
+        padding: 75px 0;
+    }
+
+    .included-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .included-card {
+        min-height: 220px;
+
+        padding: 28px;
+    }
+
+}
+/* =========================================================
+   STEP 9 — UPCOMING PARTY
+========================================================= */
+
+.upcoming {
+    padding: 120px 0;
+
+    background: var(--cream);
+}
+
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.upcoming-card {
+    display: grid;
+
+    grid-template-columns: 0.35fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+
+    padding: 65px;
+
+    background: var(--forest);
+
+    border-radius: var(--radius-lg);
+
+    color: var(--white);
+
+    box-shadow:
+        0 25px 60px rgba(53, 92, 74, 0.18);
+}
+
+
+/* =========================================================
+   DATE BLOCK
+========================================================= */
+
+.upcoming-date {
+    width: 180px;
+
+    min-height: 200px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px;
+
+    background: var(--cream);
+
+    border-radius: 20px;
+
+    color: var(--brown);
+
+    text-align: center;
+}
+
+.upcoming-date span {
+    margin-bottom: 10px;
+
+    font-size: 0.68rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+    color: var(--terracotta);
+}
+
+.upcoming-date strong {
+    font-family: var(--serif);
+
+    font-size: 2rem;
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+.upcoming-date b {
+    font-family: var(--serif);
+
+    font-size: 4.2rem;
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.upcoming-content {
+    max-width: 720px;
+}
+
+.upcoming-content .section-eyebrow {
+    color: #D9E6DF;
+}
+
+.upcoming-content h2 {
+    margin-bottom: 30px;
+
+    font-family: var(--serif);
+
+    font-size: clamp(2.5rem, 4vw, 4rem);
+
+    line-height: 1.08;
+
+    font-weight: 500;
+
+    color: var(--white);
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.upcoming-details {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 32px;
+}
+
+.upcoming-details span {
+    padding: 8px 13px;
+
+    border: 1px solid rgba(255, 255, 255, 0.20);
+
+    border-radius: 999px;
+
+    color: #E8EEE9;
+
+    font-size: 0.82rem;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.upcoming-content .btn-primary {
+    background: var(--terracotta);
+
+    border-color: var(--terracotta);
+}
+
+.upcoming-content .btn-primary:hover {
+    background: #A9553D;
+
+    border-color: #A9553D;
+}
+/* =========================================================
+   UPCOMING — MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .upcoming {
+        padding: 90px 0;
+    }
+
+    .upcoming-card {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding: 50px;
+    }
+
+    .upcoming-date {
+        width: 160px;
+
+        min-height: 180px;
+
+        margin: 0 auto;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .upcoming {
+        padding: 75px 0;
+    }
+
+    .upcoming-card {
+        padding: 35px 25px;
+
+        border-radius: 20px;
+    }
+
+    .upcoming-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .upcoming-details {
+        gap: 8px;
+    }
+
+    .upcoming-details span {
+        font-size: 0.78rem;
+    }
+
+}
+/* =========================================================
+   STEP 10 — TRUST / COMFORT
+========================================================= */
+
+.trust {
+    padding: 120px 0;
+
+    background: var(--white);
+}
+
+
+/* =========================================================
+   TRUST GRID
+========================================================= */
+
+.trust-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 0;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    border-top: 1px solid var(--border);
+
+    border-left: 1px solid var(--border);
+}
+
+
+/* =========================================================
+   TRUST ITEM
+========================================================= */
+
+.trust-item {
+    padding: 42px;
+
+    border-right: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+
+    transition:
+        background 0.3s ease;
+}
+
+.trust-item:hover {
+    background: var(--light-cream);
+}
+
+
+/* Number */
+
+.trust-item strong {
+    display: block;
+
+    margin-bottom: 20px;
+
+    font-family: var(--serif);
+
+    font-size: 1.6rem;
+
+    font-weight: 500;
+
+    color: var(--terracotta);
+}
+
+
+/* Heading */
+
+.trust-item h3 {
+    margin-bottom: 10px;
+
+    font-family: var(--serif);
+
+    font-size: 1.6rem;
+
+    font-weight: 500;
+
+    color: var(--brown);
+}
+
+
+/* Description */
+
+.trust-item p {
+    max-width: 400px;
+
+    color: #74665D;
+
+    font-size: 0.94rem;
+
+    line-height: 1.7;
+}
+/* =========================================================
+   TRUST — MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .trust {
+        padding: 90px 0;
+    }
+
+    .trust-grid {
+        grid-template-columns: 1fr;
+
+        border-left: none;
+    }
+
+    .trust-item {
+        padding: 32px 25px;
+
+        border-left: 1px solid var(--border);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .trust {
+        padding: 75px 0;
+    }
+
+    .trust-item {
+        padding: 28px 22px;
+    }
+
+    .trust-item h3 {
+        font-size: 1.4rem;
+    }
+
+}
+/* =========================================================
+   STEP 11 — FAQ
+========================================================= */
+
+.faq {
+    padding: 120px 0;
+
+    background: #E8F0EA;
+}
+
+
+/* =========================================================
+   FAQ LIST
+========================================================= */
+
+.faq-list {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    border-top: 1px solid var(--border);
+}
+
+
+/* =========================================================
+   FAQ ITEM
+========================================================= */
+
+.faq-item {
+    border-bottom: 1px solid var(--border);
+}
+
+
+/* =========================================================
+   QUESTION
+========================================================= */
+
+.faq-question {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 26px 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--brown);
+
+    text-align: left;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   PLUS ICON
+========================================================= */
+
+.faq-icon {
+    flex-shrink: 0;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border);
+
+    border-radius: 50%;
+
+    color: var(--terracotta);
+
+    font-size: 1.3rem;
+
+    font-weight: 400;
+
+    transition: var(--transition);
+}
+
+
+/* =========================================================
+   ANSWER
+========================================================= */
+
+.faq-answer {
+    display: none;
+
+    padding: 0 60px 28px 0;
+}
+
+.faq-answer p {
+    max-width: 750px;
+
+    color: #74665D;
+
+    line-height: 1.75;
+
+    font-size: 0.95rem;
+}
+
+
+/* =========================================================
+   ACTIVE FAQ
+========================================================= */
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+
+    background: var(--terracotta);
+
+    border-color: var(--terracotta);
+
+    color: var(--white);
+}
+
+
+/* =========================================================
+   FAQ — MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .faq {
+        padding: 90px 0;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .faq {
+        padding: 75px 0;
+    }
+
+    .faq-question {
+        gap: 15px;
+
+        padding: 22px 0;
+
+        font-size: 0.95rem;
+    }
+
+    .faq-answer {
+        padding-right: 35px;
+    }
+
+    .faq-icon {
+        width: 30px;
+        height: 30px;
+
+        font-size: 1.1rem;
+    }
+
+}
+/* =========================================================
+   STEP 12 — FINAL CTA
+========================================================= */
+
+.final-cta {
+    padding: 120px 0;
+
+    background: var(--forest);
+
+    color: var(--white);
+
+    text-align: center;
+}
+
+.final-cta-content {
+    max-width: 850px;
+}
+
+.final-cta .section-eyebrow {
+    color: #D9E6DF;
+}
+
+.final-cta h2 {
+    margin-bottom: 24px;
+
+    font-family: var(--serif);
+
+    font-size: clamp(2.7rem, 5vw, 4.5rem);
+
+    line-height: 1.08;
+
+    font-weight: 500;
+
+    color: var(--white);
+}
+
+.final-cta-content > p:not(.section-eyebrow) {
+    margin-bottom: 38px;
+
+    font-size: 1.1rem;
+
+    color: #E8EEE9;
+}
+
+
+/* =========================================================
+   CTA BUTTONS
+========================================================= */
+
+.final-cta-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+}
+
+.final-cta .btn-primary {
+    background: var(--terracotta);
+
+    border-color: var(--terracotta);
+}
+
+.final-cta .btn-outline {
+    border-color: rgba(255, 255, 255, 0.5);
+
+    color: var(--white);
+}
+
+.final-cta .btn-outline:hover {
+    background: var(--white);
+
+    color: var(--forest);
+
+    border-color: var(--white);
+}
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    background: var(--brown);
+
+    color: var(--white);
+}
+
+
+/* =========================================================
+   FOOTER CONTENT
+========================================================= */
+
+.footer-content {
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap: 70px;
+
+    padding: 70px 0;
+}
+
+
+/* =========================================================
+   FOOTER BRAND
+========================================================= */
+
+.footer-logo {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    font-family: var(--serif);
+
+    font-size: 1.7rem;
+
+    font-weight: 600;
+
+    color: var(--white);
+}
+
+.footer-logo span {
+    color: #E7C9B9;
+}
+
+.footer-brand p {
+    max-width: 390px;
+
+    margin-bottom: 15px;
+
+    color: #E8DDD6;
+
+    line-height: 1.7;
+}
+
+.footer-brand > span {
+    font-size: 0.85rem;
+
+    color: #D8C9C0;
+}
+
+
+/* =========================================================
+   FOOTER LINKS
+========================================================= */
+
+.footer-links,
+.footer-social {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.footer-links h4,
+.footer-social h4 {
+    margin-bottom: 8px;
+
+    font-size: 0.78rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.12em;
+
+    color: #E7C9B9;
+}
+
+.footer-links a,
+.footer-social a {
+    color: #F1E9E3;
+
+    font-size: 0.92rem;
+
+    transition: var(--transition);
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+    color: #E7C9B9;
+
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom {
+    border-top:
+        1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-bottom .container {
+    padding: 22px 0;
+}
+
+.footer-bottom p {
+    color: #CDBFB7;
+
+    font-size: 0.82rem;
+
+    text-align: center;
+}
+/* =========================================================
+   FINAL CTA + FOOTER — MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .final-cta {
+        padding: 85px 0;
+    }
+
+    .final-cta h2 {
+        font-size: 2.6rem;
+    }
+
+    .final-cta-buttons {
+        flex-direction: column;
+    }
+
+    .final-cta-buttons .btn {
+        width: 100%;
+    }
+
+
+    /* Footer */
+
+    .footer-content {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding: 55px 0;
+    }
+
+    .footer-bottom .container {
+        padding: 20px 0;
+    }
+
+}
+/* =========================================
+   EXPERIENCE PAGE
+   ========================================= */
+
+.experience-hero {
+    padding: 130px 0;
+    background: var(--cream);
+}
+
+.experience-hero-content {
+    max-width: 850px;
+}
+
+.experience-hero-content h1 {
+    max-width: 850px;
+    margin-bottom: 28px;
+
+    font-family: var(--serif);
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
+    line-height: 1.02;
+    font-weight: 500;
+
+    color: var(--brown);
+}
+
+.experience-hero-content > p:not(.section-eyebrow) {
+    max-width: 680px;
+    margin-bottom: 38px;
+
+    font-size: 1.12rem;
+    line-height: 1.8;
+
+    color: #74665D;
+}
+
+.experience-hero .hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+/* =========================================
+   EXPERIENCE INTRO
+   ========================================= */
+
+.experience-intro {
+    padding: 120px 0;
+    background: var(--white);
+}
+
+.experience-intro-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 90px;
+    align-items: start;
+}
+
+.experience-intro-heading h2 {
+    max-width: 520px;
+
+    font-family: var(--serif);
+    font-size: clamp(2.7rem, 4vw, 4.2rem);
+    line-height: 1.08;
+    font-weight: 500;
+
+    color: var(--brown);
+}
+
+.experience-intro-copy {
+    max-width: 650px;
+}
+
+.experience-intro-copy p {
+    margin-bottom: 24px;
+
+    color: #74665D;
+    font-size: 1.02rem;
+    line-height: 1.8;
+}
+
+.experience-intro-copy .experience-intro-closing {
+    margin-top: 32px;
+    margin-bottom: 0;
+
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    line-height: 1.5;
+
+    color: var(--brown);
+}
+
+
+/* PRINCIPLES */
+
+.experience-principles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+
+    margin-top: 90px;
+    padding-top: 45px;
+
+    border-top: 1px solid var(--border);
+}
+
+.experience-principle {
+    padding: 30px;
+
+    background: var(--light-cream);
+    border-radius: var(--radius-md);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.experience-principle:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(91, 70, 56, 0.10);
+}
+
+.experience-principle span {
+    display: block;
+    margin-bottom: 22px;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+
+    color: var(--terracotta);
+}
+
+.experience-principle h3 {
+    margin-bottom: 12px;
+
+    font-family: var(--serif);
+    font-size: 1.7rem;
+    font-weight: 500;
+
+    color: var(--brown);
+}
+
+.experience-principle p {
+    color: #74665D;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
