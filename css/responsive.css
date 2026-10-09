@@ -381,3 +381,418 @@
     }
 
 }
+/* =========================================
+   HOW IT WORKS — RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    .booking-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .booking-journey {
+        padding: 90px 0;
+    }
+
+    .booking-heading {
+        margin-bottom: 55px;
+    }
+
+    .booking-heading h2 {
+        font-size: 2.8rem;
+    }
+
+    .booking-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-step {
+        min-height: auto;
+        padding: 28px;
+    }
+
+    .booking-step-top {
+        margin-bottom: 35px;
+    }
+
+}
+/* =========================================
+   HOW IT WORKS — RESPONSIVE
+   ========================================= */
+
+
+@media (max-width: 1000px) {
+
+    .booking-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .booking-step:nth-child(1),
+    .booking-step:nth-child(2),
+    .booking-step:nth-child(3),
+    .booking-step:nth-child(4),
+    .booking-step:nth-child(5) {
+        grid-column: auto;
+    }
+
+
+    .payment-card {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-price {
+        max-width: 400px;
+    }
+
+
+    .arrival-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+
+    /* HERO */
+
+    .how-hero {
+        padding: 80px 0 90px;
+    }
+
+    .how-hero-content h1 {
+        font-size: clamp(2.8rem, 11vw, 4rem);
+    }
+
+    .how-hero-content > p:not(.section-eyebrow) {
+        font-size: 1rem;
+    }
+
+
+    /* BOOKING */
+
+    .booking-journey {
+        padding: 90px 0;
+    }
+
+    .booking-heading {
+        margin-bottom: 55px;
+    }
+
+    .booking-heading h2 {
+        font-size: 2.8rem;
+    }
+
+    .booking-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-step {
+        min-height: auto;
+        padding: 28px;
+    }
+
+    .booking-step-top {
+        margin-bottom: 35px;
+    }
+
+
+    /* EXPECT */
+
+    .expect-section {
+        padding: 90px 0;
+    }
+
+    .expect-heading {
+        margin-bottom: 50px;
+    }
+
+    .expect-heading h2 {
+        font-size: 2.8rem;
+    }
+
+    .expect-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .expect-card {
+        min-height: auto;
+    }
+
+
+    /* PAYMENT */
+
+    .payment-section {
+        padding: 90px 0;
+    }
+
+    .payment-card {
+        padding: 35px 25px;
+        gap: 35px;
+    }
+
+    .payment-content h2 {
+        font-size: 2.8rem;
+    }
+
+    .payment-price {
+        min-height: 200px;
+    }
+
+    .payment-price strong {
+        font-size: 3rem;
+    }
+
+
+    /* ARRIVAL */
+
+    .arrival-section {
+        padding: 90px 0;
+    }
+
+    .arrival-heading {
+        margin-bottom: 50px;
+    }
+
+    .arrival-heading h2 {
+        font-size: 2.8rem;
+    }
+
+    .arrival-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .arrival-card {
+        min-height: auto;
+    }
+
+
+    /* FINAL CTA */
+
+    .how-final-cta {
+        padding: 90px 0;
+    }
+
+    .how-final-content h2 {
+        font-size: 2.8rem;
+    }
+
+    .how-final-buttons {
+        flex-direction: column;
+    }
+
+    .how-final-buttons .btn {
+        width: 100%;
+    }
+
+}
+/* =========================================
+   FAQ PAGE — RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    .faq-page-grid {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+    .faq-page-intro {
+        position: static;
+    }
+
+    .faq-page-intro h2 {
+        max-width: 700px;
+    }
+
+    .faq-page-intro > p:not(.section-eyebrow) {
+        max-width: 650px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .faq-hero {
+        padding: 80px 0 85px;
+    }
+
+    .faq-hero-content h1 {
+        font-size: clamp(2.8rem, 11vw, 4rem);
+    }
+
+    .faq-hero-content > p:not(.section-eyebrow) {
+        font-size: 1rem;
+    }
+
+
+    .faq-page-section {
+        padding: 85px 0;
+    }
+
+    .faq-page-grid {
+        gap: 50px;
+    }
+
+    .faq-page-intro h2 {
+        font-size: 2.7rem;
+    }
+
+    .faq-page-question {
+        padding: 22px 0;
+
+        gap: 15px;
+    }
+
+    .faq-page-question span:first-child {
+        font-size: 1.08rem;
+    }
+
+    .faq-page-answer {
+        padding: 0 35px 24px 0;
+    }
+
+    .faq-page-answer p {
+        font-size: 0.92rem;
+    }
+
+
+    .faq-cta {
+        padding: 85px 0;
+    }
+
+    .faq-cta-content h2 {
+        font-size: 2.8rem;
+    }
+
+    .faq-cta-buttons {
+        flex-direction: column;
+    }
+
+    .faq-cta-buttons .btn {
+        width: 100%;
+    }
+
+}
+/* =========================================
+   CONTACT / REGISTER — RESPONSIVE
+   ========================================= */
+
+
+@media (max-width: 1000px) {
+
+    .contact-process-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-included-card {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .registration-layout {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .registration-intro {
+        position: static;
+    }
+
+    .registration-intro > p:not(.section-eyebrow) {
+        max-width: 700px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    /* HERO */
+
+    .contact-hero {
+        padding: 80px 0 85px;
+    }
+
+    .contact-hero-content h1 {
+        font-size: clamp(2.8rem, 11vw, 4rem);
+    }
+
+    .contact-hero-content > p:not(.section-eyebrow) {
+        font-size: 1rem;
+    }
+
+
+    /* PROCESS */
+
+    .contact-process {
+        padding: 85px 0;
+    }
+
+    .contact-process-heading {
+        margin-bottom: 50px;
+    }
+
+    .contact-process-heading h2 {
+        font-size: 2.8rem;
+    }
+
+    .contact-process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-process-card {
+        min-height: auto;
+    }
+
+
+    /* WHAT YOU GET */
+
+    .contact-included {
+        padding: 70px 0;
+    }
+
+    .contact-included-card {
+        padding: 35px 25px;
+    }
+
+    .contact-included-card h2 {
+        font-size: 2.7rem;
+    }
+
+
+    /* REGISTRATION */
+
+    .registration-section {
+        padding: 85px 0;
+    }
+
+    .registration-intro h2 {
+        font-size: 2.8rem;
+    }
+
+    .registration-form-card {
+        padding: 28px 22px;
+    }
+
+
+    /* WHATSAPP */
+
+    .contact-whatsapp {
+        padding: 85px 0;
+    }
+
+    .contact-whatsapp-content h2 {
+        font-size: 2.8rem;
+    }
+
+}
